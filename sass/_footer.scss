@@ -1,0 +1,33 @@
+body > footer {
+	#tweet {
+		background: #F7F7F7;
+		
+		.centerWrapper {
+			$tweetHorizontalPadding: 25px;
+			width: $mainWidth - $tweetHorizontalPadding * 2;
+			padding: 12px $tweetHorizontalPadding;
+			background: inline-image("icons/footer_twitter.png") no-repeat 0 13px transparent;
+		}
+		
+		q {
+			color: #777777;
+			font-style: italic;
+			font-size: 14px;
+			
+			&:before, &:after {
+				content: "\"";
+			}
+		}
+	}
+	
+	#info {
+		color: #AAAAAA;
+		background: #454546;
+		font-size: 12px;
+		line-height: 22px;
+		
+		.centerWrapper {
+			padding: 5px 0 20px 0;
+		}
+	}
+}
