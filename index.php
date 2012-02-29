@@ -14,6 +14,9 @@
 			</div>
 		</div>
 	<?php endif; ?>
+	<?php if(is_single()): ?>
+		<?php comments_template( '', true ); ?>
+	<?php endif; ?>
 </div>
 
 <?php get_sidebar(); ?>
