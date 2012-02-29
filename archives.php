@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <div id="content">
-	<h2>Archiv</h2>
+	<article id="archive">
+		<header>
+			<h2>Archiv</h2>
+		</header>
 		<?php
 				
 		$months = $wpdb->get_results("SELECT DISTINCT DATE_FORMAT(post_date, '%Y') AS year, DATE_FORMAT(post_date, '%m') AS month FROM " . $wpdb->posts . " WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date ASC", ARRAY_A);
@@ -24,6 +27,7 @@
 		echo $output;
 		//echo archives end
 		?>
+	</article>
 </div>
 
 <?php get_sidebar(); ?>

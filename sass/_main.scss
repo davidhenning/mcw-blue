@@ -52,6 +52,38 @@
 		}
 	}
 	
+	.list {
+		&.year {
+			float: left;
+			width: 155px;
+			list-style-type: none;
+			margin: 10px 0;
+			font-size: 14px;
+			line-height: 1.7em;
+			min-height: 320px;
+			
+			li {
+				padding-left: 6px;
+				
+				a {
+					color: #000000;
+					&:hover {
+						color: #990000;
+					}
+				}
+				
+				
+				&.title {
+					padding: 0;
+					
+					h2 {
+						font-size: 22px; 
+					}
+				}
+			}
+		}
+	}
+	
 	#pagination {
 		@include pie-clearfix;
 		font-size: 14px; 
