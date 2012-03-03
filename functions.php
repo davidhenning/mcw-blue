@@ -30,7 +30,7 @@ function getLastQuoteFromTwitter($sTwitterId = null) {
 			);
 
 			$iTwitterTransientExpire = 900;
-			$sTwitterUrl = esc_url_raw('http://api.twitter.com/1/statuses/user_timeline.json?'.http_build_query($params), array('http'));
+			$sTwitterUrl = esc_url_raw('http://api.twitter.com/1/statuses/user_timeline.json?'.http_build_query($aParams), array('http'));
 			$aResponse = wp_remote_get($sTwitterUrl, array('User-Agent' => 'WordPress'));
 			$iResponseCode = wp_remote_retrieve_response_code($aResponse);
 			
