@@ -1,10 +1,12 @@
 			</div>
 		</div>
 		<footer>
-			<?php if($sTweet = getLastQuoteFromTwitter('d_henning')): ?>
+			<?php 
+			$options = get_option('mcw_theme_options');
+			if($sTweet = getLastQuoteFromTwitter($options['twitter_id'])): ?>
 				<div id="tweet">
 					<div class="centerWrapper">
-						<q cite="http://twitter.com/#!/d_henning"><?php echo $sTweet; ?></q>
+						<q cite="http://twitter.com/#!/<?php echo $options['twitter_id']; ?>"><?php echo $sTweet; ?></q>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -15,6 +17,6 @@
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
-		<?php $options = get_option('mcw_theme_options'); echo $options['custom_footer']; ?>
+		<?php echo $options['custom_footer']; ?>
 	</body>
 </html>

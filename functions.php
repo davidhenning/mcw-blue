@@ -20,7 +20,7 @@ function special_nav_class($classes, $item) {
 }
 
 function getLastQuoteFromTwitter($sTwitterId = null) {
-	if($sTwitterId !== null) {
+	if($sTwitterId !== null && strlen($sTwitterId) > 0) {
 		if(($aTweets = get_transient('twitter-quote')) === false) {
 			$aParams = array(
 				'screen_name'=> $sTwitterId, 
