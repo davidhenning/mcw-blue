@@ -53,3 +53,59 @@ function getLastQuoteFromTwitter($sTwitterId = null) {
 
 	return null;
 }
+
+add_action('admin_init', 'theme_options_init');
+add_action('admin_menu', 'theme_options_add_page');
+
+function theme_options_init(){
+	register_setting('mcw_options', 'mcw_theme_options', 'mcw_validate_options');
+}
+
+function theme_options_add_page() {
+	add_theme_page('Optionen', 'Optionen', 'edit_theme_options', 'theme_options', 'mcw_theme_options_page');
+}
+
+function mcw_theme_options_page() {
+	global $select_options, $radio_options;
+
+	if(!isset($_REQUEST['settings-updated'])) {
+		$_REQUEST['settings-updated'] = false;
+	}
+
+	?>
+
+	<div class="wrap">
+	<?php screen_icon(); ?><h2>Theme-Optionen für <?php bloginfo('name'); ?></h2> 
+
+	<?php if($_REQUEST['settings-updated'] !== false): ?>
+		<div class="updated fade">
+			<p><strong>Einstellungen gespeichert!</strong></p>
+		</div>
+	<?php endif; ?>
+
+	  <form method="post" action="options.php">
+		<?php settings_fields('mcw_options'); ?>
+	    <?php $options = get_option('mcw_theme_options'); ?>
+
+	    <table class="form-table">
+	      <tr valign="top">
+	        <th scope="row">typekit</th>
+	        <td><textarea id="mcw_theme_options[typekit]" class="large-text" cols="50" rows="10" name="mcw_theme_options[typekit]"><?php echo esc_textarea($options['typekit']); ?></textarea></td>
+	      </tr>
+	      <tr valign="top">
+	        <th scope="row">Custom Footer</th>
+	        <td><textarea id="mcw_theme_options[custom_footer]" class="large-text" cols="50" rows="10" name="mcw_theme_options[custom_footer]"><?php echo esc_textarea($options['custom_footer']); ?></textarea></td>
+	      </tr>
+	    </table>
+
+	    <!-- submit -->
+	    <p class="submit"><input type="submit" class="button-primary" value="Einstellungen speichern" /></p>
+	  </form>
+	</div>
+
+	<?php
+}
+
+function mcw_validate_options($sInput) {
+	return $sInput;
+}

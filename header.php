@@ -2,8 +2,7 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<script type="text/javascript" src="http://use.typekit.com/ukt0qwk.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<?php $options = get_option('mcw_theme_options'); echo $options['typekit']; ?>
 		<title>
 			<?php
 			/*
