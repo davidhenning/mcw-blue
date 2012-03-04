@@ -2,6 +2,11 @@
 
 <div id="content">
 	<?php if ( have_posts() ) : ?>
+		<?php if(is_search()): ?>
+			<header class="search">
+				<p>Suchergebnisse f&uuml;r: &quot;<?php echo get_search_query(); ?>&quot;</p>
+			</header>
+		<?php endif; ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>">
 				<header>

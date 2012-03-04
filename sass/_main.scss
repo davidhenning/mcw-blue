@@ -7,6 +7,13 @@
 	width: 640px - $contentPaddingHorizontal * 2;
 	padding: 2em $contentPaddingHorizontal;
 	
+	header {
+		&.search {
+			margin-bottom: 2em;
+			color: #AFAFAF;
+		}
+	}
+
 	article {
 		margin-bottom: 5em;
 		
