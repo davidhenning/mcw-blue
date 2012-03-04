@@ -9,9 +9,9 @@ if(function_exists('register_sidebar')) {
 	));
 }
 
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+add_filter('nav_menu_css_class' , 'highlightHome' , 10 , 2);
 
-function special_nav_class($classes, $item) {
+function highlightHome($classes, $item) {
 	if(is_home() && $item->title == 'weblog') { 
 		$classes[] = "current-menu-item";
 	}
@@ -54,20 +54,18 @@ function getLastQuoteFromTwitter($sTwitterId = null) {
 	return null;
 }
 
-add_action('admin_init', 'theme_options_init');
-add_action('admin_menu', 'theme_options_add_page');
+add_action('admin_init', 'themeOptionsInit');
+add_action('admin_menu', 'themeOptionsAddPage');
 
-function theme_options_init(){
-	register_setting('mcw_options', 'mcw_theme_options', 'mcw_validate_options');
+function themeOptionsInit(){
+	register_setting('mcw_options', 'mcw_theme_options', 'mcwValidateOptions');
 }
 
-function theme_options_add_page() {
-	add_theme_page('Optionen', 'Optionen', 'edit_theme_options', 'theme_options', 'mcw_theme_options_page');
+function themeOptionsAddPage() {
+	add_theme_page('Optionen', 'Optionen', 'edit_theme_options', 'theme_options', 'mcwThemeOptionsPage');
 }
 
-function mcw_theme_options_page() {
-	global $select_options, $radio_options;
-
+function mcwThemeOptionsPage() {
 	if(!isset($_REQUEST['settings-updated'])) {
 		$_REQUEST['settings-updated'] = false;
 	}
@@ -75,41 +73,41 @@ function mcw_theme_options_page() {
 	?>
 
 	<div class="wrap">
-	<?php screen_icon(); ?><h2>Theme-Optionen für <?php bloginfo('name'); ?></h2> 
+		<?php screen_icon(); ?><h2>Theme-Optionen für <?php bloginfo('name'); ?></h2> 
 
-	<?php if($_REQUEST['settings-updated'] !== false): ?>
-		<div class="updated fade">
-			<p><strong>Einstellungen gespeichert!</strong></p>
-		</div>
-	<?php endif; ?>
+		<?php if($_REQUEST['settings-updated'] !== false): ?>
+			<div class="updated fade">
+				<p><strong>Einstellungen gespeichert!</strong></p>
+			</div>
+		<?php endif; ?>
 
-	  <form method="post" action="options.php">
-		<?php settings_fields('mcw_options'); ?>
-	    <?php $options = get_option('mcw_theme_options'); ?>
+		<form method="post" action="options.php">
+			<?php settings_fields('mcw_options'); ?>
+			<?php $options = get_option('mcw_theme_options'); ?>
 
-	    <table class="form-table">
-	      <tr valign="top">
-	        <th scope="row">TypeKit JavaScript Code</th>
-	        <td><textarea id="mcw_theme_options[typekit]" class="large-text" cols="50" rows="10" name="mcw_theme_options[typekit]"><?php echo esc_textarea($options['typekit']); ?></textarea></td>
-	      </tr>
-	      <tr valign="top">
-	        <th scope="row">Custom Footer</th>
-	        <td><textarea id="mcw_theme_options[custom_footer]" class="large-text" cols="50" rows="10" name="mcw_theme_options[custom_footer]"><?php echo esc_textarea($options['custom_footer']); ?></textarea></td>
-	      </tr>
-	      <tr valign="top">
-	        <th scope="row">Twitter ID</th>
-	        <td><input id="mcw_theme_options[twitter_id]" class="regular-text" type="text" name="mcw_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" /></td>
-	      </tr>
-	    </table>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">TypeKit JavaScript Code</th>
+					<td><textarea id="mcw_theme_options[typekit]" class="large-text" cols="50" rows="10" name="mcw_theme_options[typekit]"><?php echo esc_textarea($options['typekit']); ?></textarea></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Custom Footer</th>
+					<td><textarea id="mcw_theme_options[custom_footer]" class="large-text" cols="50" rows="10" name="mcw_theme_options[custom_footer]"><?php echo esc_textarea($options['custom_footer']); ?></textarea></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Twitter ID</th>
+					<td><input id="mcw_theme_options[twitter_id]" class="regular-text" type="text" name="mcw_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" /></td>
+				</tr>
+			</table>
 
-	    <!-- submit -->
-	    <p class="submit"><input type="submit" class="button-primary" value="Einstellungen speichern" /></p>
-	  </form>
+			<!-- submit -->
+			<p class="submit"><input type="submit" class="button-primary" value="Einstellungen speichern" /></p>
+		</form>
 	</div>
 
 	<?php
 }
 
-function mcw_validate_options($sInput) {
+function mcwValidateOptions($sInput) {
 	return $sInput;
 }
