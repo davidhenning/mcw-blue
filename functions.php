@@ -89,12 +89,16 @@ function mcw_theme_options_page() {
 
 	    <table class="form-table">
 	      <tr valign="top">
-	        <th scope="row">typekit</th>
+	        <th scope="row">TypeKit JavaScript Code</th>
 	        <td><textarea id="mcw_theme_options[typekit]" class="large-text" cols="50" rows="10" name="mcw_theme_options[typekit]"><?php echo esc_textarea($options['typekit']); ?></textarea></td>
 	      </tr>
 	      <tr valign="top">
 	        <th scope="row">Custom Footer</th>
 	        <td><textarea id="mcw_theme_options[custom_footer]" class="large-text" cols="50" rows="10" name="mcw_theme_options[custom_footer]"><?php echo esc_textarea($options['custom_footer']); ?></textarea></td>
+	      </tr>
+	      <tr valign="top">
+	        <th scope="row">Twitter ID</th>
+	        <td><input id="mcw_theme_options[twitter_id]" class="regular-text" type="text" name="mcw_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" /></td>
 	      </tr>
 	    </table>
 
