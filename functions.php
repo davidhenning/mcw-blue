@@ -1,5 +1,9 @@
 <?php
 
+if(!is_admin()) {
+	wp_deregister_script('jquery');
+}
+
 if(function_exists('register_sidebar')) {
 	register_sidebar(array(
 		'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',

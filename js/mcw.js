@@ -8,6 +8,6 @@ require.config({
 
 require(['jquery', 'exturls', 'annotationloader'], function(jquery, exturls, annotationloader){
   jquery.noConflict();
-  exturls.init();
   annotationloader.load();
+  exturls.init();
 });
