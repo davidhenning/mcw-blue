@@ -17,6 +17,7 @@
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
+		<script src="<?php echo bloginfo('template_url'); ?>/js/libs/require/require.js" data-main="<?php echo bloginfo('template_url'); ?>/js/mcw"></script>
 		<?php echo $options['custom_footer']; ?>
 	</body>
 </html>
