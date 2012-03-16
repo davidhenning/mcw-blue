@@ -27,6 +27,7 @@
 			?>
 		</title>
 		<link href="<?php echo bloginfo('template_url'); ?>/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<link href="<?php echo bloginfo('template_url'); ?>/stylesheets/jquery.lightbox-0.5.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<?php
 			/* We add some JavaScript to pages with the comment form
 			 * to support sites with threaded comments (when in use).
