@@ -41,9 +41,13 @@
 			 * as styles, scripts, and meta tags.
 			 */
 			wp_head();
+
+			if($options['cdn_url']) {
+				$cdnUrl = $options['cdn_url']."wp-content/themes/".get_option('template')."/js/";
+			}
 		?>
 	</head>
-	<body data-cdn-url="<?php echo $options['cdn_url']; ?>">
+	<body data-cdn-url="<?php echo $cdnUrl; ?>">
 		<div class="centerWrapper">
 			<nav>
 				<?php wp_nav_menu(array('container' => false)); ?>
