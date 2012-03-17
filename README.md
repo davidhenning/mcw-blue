@@ -51,11 +51,11 @@ Example:
 		return exports;
 	});
 
-Use the function define your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this example we're your using the jquery. As second parameter you create a callback function. The callbacks parameters are the libraries you specified before. This example uses a $ for jQuery.
+Use the function define() to write your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this example we are using a dependency to jQuery (jquery is a keyword containing the full path to jQuery specified in the require.js config in the file js/mcw.js). As second parameter you have to create a callback function. The callbacks parameters are the libraries you specified as dependencies before. This example uses a $ for jQuery.
 
 Within the callback you can write your own code. There is only one simple convention you have to follow: the callback must return an object with a method called init which has to start your own code as in the example above.
 
-If you are calling your module from a div element, a reference of the calling div element is passed as the first parameter to your init method. If your div has module paramaters, the are passed as well as second, third etc. parameter.
+If you are calling your module from a div element, a reference of the calling div element is passed as the first parameter to your init method. If your div has module paramaters, they are passed as well as second, third etc. parameter.
 
 For a more detailed description please take a look at the [require.js documentation].
 
