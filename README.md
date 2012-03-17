@@ -17,9 +17,9 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 - custom archive template grouped by year and month
 
 ##Issues
-Currently mcw[blue] supports only the german language. Multi-language support is planed for the next version.
+- Currently mcw[blue] supports only the german language. Multi-language support is planed for the next version.
 
-## How to add a module using a div element
+##Load a JavaScript module using a div element
 
 Syntax:
 	
@@ -31,8 +31,41 @@ Example:
     
     <div data-module="modules/tracking/googleanalytics" data-module-parameters="UA-XXXXXXX-X"></div>
 
+##Write your own JavaScript module
+
+Example:
+
+	define(['jquery'], function($) {
+		var exports = {};
+
+		function doMyStuff(element) {
+			$(element).append('<p>Have fun!</p>')
+		}
+
+		exports.init = function(element [, param1 [, param2 ...]]) {
+			$(document).ready(function() {
+				doMyStuff(element);
+			});
+		}
+
+		return exports;
+	});
+
+Use the function define your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this example we're your using the jquery. As second parameter you create a callback function. The callbacks parameters are the libraries you specified before. This example uses a $ for jQuery.
+
+Within the callback you can write your own code. There is only one simple convention you have to follow: the callback must return an object with a method called init which has to start your own code as in the example above.
+
+If you are calling your module from a div element, a reference of the calling div element is passed as the first parameter to your init method. If your div has module paramaters, the are passed as well as second, third etc. parameter.
+
+For a more detailed description please take a look at the [require.js documentation].
+
+__Important:__ the init method is a convention of my module loading system and has nothing to do with require.js!
+
+
 ##Why?
 I was searching for a new slim HTML 5 theme for my blog. My old theme was a really big one. It is highly customizable via the admin panel but very slow and the generated markup is a mess with way to much nested elements. The search wasn't very successful, so I decided to create my own theme.
 
 ##Who
 I am web developer at Chip Xonio Online Ltd in Munich working in the portal development team for chip.de, the leading IT website in germany.
+
+[require.js documentation]: http://requirejs.org/docs/api.html#defdep
