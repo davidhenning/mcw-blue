@@ -1,5 +1,9 @@
 <?php
 
+if(!is_admin()) {
+	wp_deregister_script('jquery');
+}
+
 if(function_exists('register_sidebar')) {
 	register_sidebar(array(
 		'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
@@ -97,6 +101,10 @@ function mcwThemeOptionsPage() {
 				<tr valign="top">
 					<th scope="row">Twitter ID</th>
 					<td><input id="mcw_theme_options[twitter_id]" class="regular-text" type="text" name="mcw_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">CDN URL</th>
+					<td><input id="mcw_theme_options[cdn_url]" class="regular-text" type="text" name="mcw_theme_options[cdn_url]" value="<?php esc_attr_e( $options['cdn_url'] ); ?>" /></td>
 				</tr>
 			</table>
 

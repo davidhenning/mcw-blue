@@ -27,6 +27,7 @@
 			?>
 		</title>
 		<link href="<?php echo bloginfo('template_url'); ?>/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<link href="<?php echo bloginfo('template_url'); ?>/stylesheets/jquery.lightbox-0.5.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<?php
 			/* We add some JavaScript to pages with the comment form
 			 * to support sites with threaded comments (when in use).
@@ -40,9 +41,13 @@
 			 * as styles, scripts, and meta tags.
 			 */
 			wp_head();
+
+			if($options['cdn_url']) {
+				$cdnUrl = $options['cdn_url']."wp-content/themes/".get_option('template')."/js/";
+			}
 		?>
 	</head>
-	<body>
+	<body data-cdn-url="<?php echo $cdnUrl; ?>">
 		<div class="centerWrapper">
 			<nav>
 				<?php wp_nav_menu(array('container' => false)); ?>
