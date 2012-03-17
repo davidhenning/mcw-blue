@@ -102,6 +102,10 @@ function mcwThemeOptionsPage() {
 					<th scope="row">Twitter ID</th>
 					<td><input id="mcw_theme_options[twitter_id]" class="regular-text" type="text" name="mcw_theme_options[twitter_id]" value="<?php esc_attr_e( $options['twitter_id'] ); ?>" /></td>
 				</tr>
+				<tr valign="top">
+					<th scope="row">CDN URL</th>
+					<td><input id="mcw_theme_options[cdn_url]" class="regular-text" type="text" name="mcw_theme_options[cdn_url]" value="<?php esc_attr_e( $options['cdn_url'] ); ?>" /></td>
+				</tr>
 			</table>
 
 			<!-- submit -->

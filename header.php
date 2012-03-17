@@ -43,7 +43,7 @@
 			wp_head();
 		?>
 	</head>
-	<body>
+	<body data-cdn-url="<?php echo $options['cdn_url']; ?>">
 		<div class="centerWrapper">
 			<nav>
 				<?php wp_nav_menu(array('container' => false)); ?>
