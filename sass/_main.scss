@@ -78,6 +78,29 @@
 			li {
 				margin: .3em 0 .3em 40px;
 			}
+
+			pre[name="code"] {
+				font-family: "droid-sans-mono-1","droid-sans-mono-2",sans-serif;
+				font-size: 12px;
+				background: #E7E5DC;
+				padding: 1px;
+				margin-bottom: 1em;
+
+				ol {
+					margin: 0;
+				}
+
+				li {
+					margin: 0 0 0 40px;
+					line-height: 1.4em;					
+					padding-left: 10px;
+					border-left: 3px solid #6CE26C;
+										background: #FFFFFF;
+					&:nth-child(even) {
+						background: #F8F8F8;
+					}
+				}
+			}
 		}
 	}
 	
