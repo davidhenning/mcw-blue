@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: header.php:7
+msgid "Page %s"
+msgstr "Seite %s"
+
+#. Text in echo
+#: header.php:56
+msgid "Search"
+msgstr "Suche"
+
+#. Text in function
+#: index.php:17
+msgid "% comments"
+msgstr "% Kommentare"
+
+#. Text in function
+#: index.php:28
+msgid "&larr; previous entries"
+msgstr "&larr; vorherige Einträge"
+
+#. Text in echo
+#: index.php:7
+msgid "Search Results for:"
+msgstr "Suchergebnisse für:"
+
+#. Text in function
+#: index.php:31
+msgid "next entries &rarr;"
+msgstr "nächste Einträge &rarr;"
+
+#. Text in function
+#: index.php:17
+msgid "one comment"
+msgstr "ein Kommentar"
+
+#. Text in function
+#: index.php:17
+msgid "write a comment"
+msgstr "schreib einen Kommentar"
+
