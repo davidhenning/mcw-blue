@@ -43,7 +43,7 @@
 			wp_head();
 
 			if($options['cdn_url']) {
-				$cdnUrl = $options['cdn_url']."wp-content/themes/".get_option('template')."/js/";
+				$cdnUrl = $options['cdn_url']."wp-content/themes/".get_option('template')."/js/production/";
 			}
 		?>
 	</head>
