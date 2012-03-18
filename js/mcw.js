@@ -1,4 +1,4 @@
-var cdnUrl = document.getElementsByTagName('body')[0].getAttribute('data-cdn-url');
+var cdnUrl = document.getElementsByTagName('body')[0].getAttribute('data-cdn-url') || '';
 var requireConfig = {
   paths: {
     'jquery': 'libs/jquery/jquery-1.7.1',
