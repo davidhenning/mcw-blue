@@ -1,0 +1,1 @@
+define(["jquery"],function(a){var b={};return b.load=function(b){a("[data-module]",b).each(function(b){var c=a(this).data("module"),d=a(this).data("module-parameters")||"";d=d.split(","),d.unshift(this),require([c],function(a){a.init.apply(a,d)})})},b});
