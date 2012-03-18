@@ -108,6 +108,13 @@ function mcwThemeOptionsPage() {
 					<th scope="row">CDN URL</th>
 					<td><input id="mcw_theme_options[cdn_url]" class="regular-text" type="text" name="mcw_theme_options[cdn_url]" value="<?php esc_attr_e( $options['cdn_url'] ); ?>" /></td>
 				</tr>
+				<tr valign="top">
+					<th scope="row">Developer mode</th>
+					<td>
+						<input type="hidden" name="mcw_theme_options[dev_mode]" value="0" />
+						<input id="mcw_theme_options[dev_mode]" type="checkbox" name="mcw_theme_options[dev_mode]" value="1" <?php if($options['dev_mode'] == '1') { echo 'checked="checked"'; } ?> />
+					</td>
+				</tr>
 			</table>
 
 			<!-- submit -->
