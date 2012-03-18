@@ -1,5 +1,7 @@
 <?php
 
+load_theme_textdomain('mcw-blue', TEMPLATEPATH.'/languages');
+
 if(!is_admin()) {
 	wp_deregister_script('jquery');
 }
