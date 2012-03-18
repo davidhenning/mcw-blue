@@ -53,7 +53,7 @@
 				<?php wp_nav_menu(array('container' => false)); ?>
 				<form action="<?php bloginfo('home'); ?>" method="get">
 					<fieldset id="search">
-						<input type="text" name="s" value="Suchen" onfocus="if (this.value == 'Suchen') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Suchen';}">
+						<input type="text" name="s" placeholder="Suchen">
 						<input type="submit" name="search">
 					</fieldset>
 				</form>
