@@ -4,7 +4,7 @@
 	<?php if ( have_posts() ) : ?>
 		<?php if(is_search()): ?>
 			<header class="search">
-				<p>Suchergebnisse f&uuml;r: &quot;<?php echo get_search_query(); ?>&quot;</p>
+				<p><?php _e('Search Results for:', 'mcw-blue'); ?> &quot;<?php echo get_search_query(); ?>&quot;</p>
 			</header>
 		<?php endif; ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -12,9 +12,9 @@
 				<header>
 					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					<aside class="meta">
-						<span class="date"><?php the_time(get_option( 'date_format' )); ?></span> 
+						<span class="date"><?php the_time(get_option('date_format')); ?></span> 
 						<?php if(!is_single()): ?>
-							&middot; <?php comments_popup_link('Schreib einen Kommentar', 'Ein Kommentar', '% Kommentare'); ?>
+							&middot; <?php comments_popup_link(__('write a comment', 'mcw-blue'), __('one comment', 'mcw-blue'), __('% comments', 'mcw-blue')); ?>
 						<?php endif; ?>
 					</aside>
 				</header>
@@ -25,10 +25,10 @@
 		<?php endwhile; ?>
 		<div id="pagination">
 			<div class="prev">
-				<?php previous_posts_link('&larr; Vorherige Eintr&auml;ge'); ?>&nbsp;
+				<?php previous_posts_link(__('&larr; previous entries', 'mcw-blue')); ?>&nbsp;
 			</div>
 			<div class="next">
-				&nbsp;<?php next_posts_link('N&auml;chste Eintr&auml;ge &rarr;',''); ?>
+				&nbsp;<?php next_posts_link(__('next entries &rarr;', 'mcw-blue')); ?>
 			</div>
 		</div>
 	<?php endif; ?>
