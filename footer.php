@@ -3,6 +3,8 @@
 		<footer>
 			<?php 
 			$options = get_option('mcw_theme_options');
+			$jsUrl = get_bloginfo('template_url');
+			$jsUrl .= ($options['dev_mode'] == '1') ? '/js/source/' : '/js/production/';
 			if($sTweet = getLastQuoteFromTwitter($options['twitter_id'])): ?>
 				<div id="tweet">
 					<div class="centerWrapper">
@@ -17,7 +19,7 @@
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
-		<script src="<?php echo bloginfo('template_url'); ?>/js/production/libs/require/require.js" data-main="<?php echo bloginfo('template_url'); ?>/js/production/mcw"></script>
+		<script src="<?php echo $jsUrl; ?>libs/require/require.js" data-main="<?php echo $jsUrl; ?>mcw"></script>
 		<?php echo $options['custom_footer']; ?>
 		<div data-module="modules/mcw/lightbox" data-module-parameters="<?php echo bloginfo('template_url'); ?>/images/"></div>
 	</body>
