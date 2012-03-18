@@ -15,9 +15,7 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 - add your TypeKit JavaScript snippet or any other webfont system (in case you don't want to use the module)
 - sidebar with widget support
 - custom archive template grouped by year and month
-
-##Issues
-- Currently mcw[blue] supports only the german language. Multi-language support is planed for the next version.
+- i18n support (included languages english and german)
 
 ##Load a JavaScript module using a div element
 
