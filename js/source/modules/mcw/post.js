@@ -11,7 +11,7 @@ define(['jquery'], function($) {
 	}
 
 	exports.highlightSyntax = function(element) {
-		require(['libs/jquery/jquery-chili-2.2', 'libs/jquery/jquery-chili-recipes'], function() {
+		require(['libs/jquery/jquery-chili-2.2'], function() {
 			$(document).ready(function() {
 				$.chili.automatic.active = false;
 				$('pre', element).chili();
