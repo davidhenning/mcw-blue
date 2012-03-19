@@ -18,7 +18,7 @@
 						<?php endif; ?>
 					</aside>
 				</header>
-				<div class="content">
+				<div class="content" data-module="modules/mcw/post">
 					<?php the_content(); ?>
 				</div>
 			</article>
