@@ -49,3 +49,28 @@ msgstr "ein Kommentar"
 msgid "write a comment"
 msgstr "schreib einen Kommentar"
 
+#. Text in function
+#: comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; &auml;ltere Kommentare"
+
+#. Text in echo
+#: comments.php:60
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#. Text in echo
+#: comments.php:72
+msgid "Comments are closed."
+msgstr "Kommentare geschlossen."
+
+#. Text in function
+#: comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "neuere Kommentare &rarr;"
+
+#. Text in echo
+#: comments.php:17
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dieser Eintrag ist passwortgesch&uuml;tzt. Bitte geben Sie das Passwort ein, um die Kommentare ansehen zu k&ouml;nnen."
+
