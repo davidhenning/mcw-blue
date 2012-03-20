@@ -8,6 +8,7 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Text in function
 #: header.php:7
@@ -50,27 +51,61 @@ msgid "write a comment"
 msgstr "schreib einen Kommentar"
 
 #. Text in function
-#: comments.php:61
+#: comments.php:35
+msgid "%1$s at %2$s"
+msgstr "%1$s von %2$s"
+
+#. Text in function
+#: comments.php:35
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr "%1$s am %2$s <span class=\"says\">sagte:</span>"
+
+#. Text in function
+#: comments.php:20
+#: comments.php:81
 msgid "&larr; Older Comments"
 msgstr "&larr; &auml;ltere Kommentare"
 
 #. Text in echo
-#: comments.php:60
+#: comments.php:19
+#: comments.php:80
 msgid "Comment navigation"
 msgstr "Kommentarnavigation"
 
 #. Text in echo
-#: comments.php:72
+#: comments.php:92
 msgid "Comments are closed."
 msgstr "Kommentare geschlossen."
 
 #. Text in function
-#: comments.php:62
+#: comments.php:52
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#. Text in function
+#: comments.php:21
+#: comments.php:82
 msgid "Newer Comments &rarr;"
 msgstr "neuere Kommentare &rarr;"
 
+#. Text in function
+#: comments.php:62
+msgid "Reply <span>&darr;</span>"
+msgstr "Antwort <span>&darr;</span>"
+
 #. Text in echo
-#: comments.php:17
+#: comments.php:3
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Dieser Eintrag ist passwortgesch&uuml;tzt. Bitte geben Sie das Passwort ein, um die Kommentare ansehen zu k&ouml;nnen."
+
+#. Text in echo
+#: comments.php:56
+msgid "Your comment is awaiting moderation."
+msgstr "Ihr Kommentar wartet auf die Freischaltung."
+
+#: comments.php:12
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Eine Antwort auf  &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Antworten auf  &ldquo;%2$s&rdquo;"
 
