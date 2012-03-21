@@ -136,6 +136,30 @@
 		}
 	}
 	
+	#comments {
+
+	}
+
+	#respond {
+		h3 {
+			margin-bottom: 2em;
+		}
+
+		form {
+			p {
+				@include pie-clearfix;
+				padding: 4px 0;
+
+				label {
+					float: left;
+					display: block;
+					width: 130px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
 	#pagination {
 		@include pie-clearfix;
 		font-size: 14px; 
