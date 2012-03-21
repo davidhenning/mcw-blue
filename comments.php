@@ -16,9 +16,9 @@
 
         <?php if(get_comment_pages_count() > 1 && get_option('page_comments')): ?>
             <nav id="comment-nav-above">
-                <h1 class="assistive-text"><?php _e('Comment navigation', 'mcw-blue'); ?></h1>
-                <div class="nav-previous"><?php previous_comments_link( __('&larr; Older Comments', 'mcw-blue')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'mcw-blue')); ?></div>
+                <h1><?php _e('Comment navigation', 'mcw-blue'); ?></h1>
+                <div class="prev"><?php previous_comments_link( __('&larr; Older Comments', 'mcw-blue')); ?></div>
+                <div class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'mcw-blue')); ?></div>
             </nav>
         <?php endif;?>
 
@@ -29,9 +29,9 @@
                 ?>
 
                     <li>
-                        <article id="comment-<?php comment_ID(); ?>" class="comment">
-                            <header class="comment-meta">
-                                <div class="comment-author vcard">
+                        <article id="comment-<?php comment_ID(); ?>">
+                            <header>
+                                <div class="vcard">
                                     <?php
                                         $avatar_size = 68;
                                         if($comment->comment_parent != '0') {
@@ -54,11 +54,15 @@
                                 </div>
 
                                 <?php if($comment->comment_approved == '0'): ?>
-                                    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mcw-blue'); ?></em>
+                                    <em class="awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mcw-blue'); ?></em>
                                 <?php endif; ?>
 
                             </header>
-                            <div class="content"><?php comment_text(); ?></div>
+
+                            <div class="content">
+                                <?php comment_text(); ?>
+                            </div>
+
                             <div class="reply">
                                 <?php 
                                     comment_reply_link(array_merge($args, array(
@@ -77,15 +81,15 @@
         </ol>
 
         <?php if(get_comment_pages_count() > 1 && get_option('page_comments')): ?>
-        <nav id="comment-nav-below">
-            <h1 class="assistive-text"><?php _e('Comment navigation', 'mcw-blue'); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'mcw-blue')); ?></div>
-            <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'mcw-blue')); ?></div>
-        </nav>
+            <nav id="comment-nav-below">
+                <h1><?php _e('Comment navigation', 'mcw-blue'); ?></h1>
+                <div class="prev"><?php previous_comments_link(__('&larr; Older Comments', 'mcw-blue')); ?></div>
+                <div class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'mcw-blue')); ?></div>
+            </nav>
         <?php endif; ?>
 
     <?php
-        elseif (! comments_open() && ! is_page() && post_type_supports(get_post_type(), 'comments')):
+        elseif (!comments_open() && ! is_page() && post_type_supports(get_post_type(), 'comments')):
     ?>
         <p class="nocomments"><?php _e('Comments are closed.', 'mcw-blue'); ?></p>
     <?php endif; ?>
