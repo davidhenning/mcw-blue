@@ -53,12 +53,12 @@ msgstr "schreib einen Kommentar"
 #. Text in function
 #: comments.php:35
 msgid "%1$s at %2$s"
-msgstr "%1$s von %2$s"
+msgstr "%1$s, %2$s Uhr"
 
 #. Text in function
 #: comments.php:35
 msgid "%1$s on %2$s <span class=\"says\">said:</span>"
-msgstr "%1$s am %2$s <span class=\"says\">sagte:</span>"
+msgstr "%1$s &middot;  %2$s"
 
 #. Text in function
 #: comments.php:20
