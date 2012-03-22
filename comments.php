@@ -99,20 +99,20 @@
         $commenter = wp_get_current_commenter();
         $req = get_option( 'require_name_email' );
         $aria_req = ( $req ? " aria-required='true'" : '' );
-        $required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
+        $required_text = sprintf( ' ' . __('Required fields are marked %s', 'mcw-blue'), '<span class="required">*</span>' );
         $fields = array(
-            'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ($req ? '<span class="required">*</span>' : '') . '</label> ' . 
+            'author' => '<p class="comment-form-author">' . '<label for="author">' . __('Name', 'mcw-blue') . ($req ? '<span class="required">*</span>' : '') . '</label> ' . 
                         '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . '></p>',
-            'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . 
+            'email'  => '<p class="comment-form-email"><label for="email">' . __('Email', 'mcw-blue') . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . 
                         '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . '></p>',
-            'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+            'url'    => '<p class="comment-form-url"><label for="url">' . __('Website', 'mcw-blue') . '</label>' .
                         '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '"></p>'
         );
       
         comment_form(array(
             'fields' => apply_filters('comment_form_default_fields', $fields),
             'comment_notes_before' => '',      
-            'comment_notes_after' => '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>'
+            'comment_notes_after' => '<p class="comment-notes">' . __('Your email address will not be published.', 'mcw-blue') . ( $req ? $required_text : '' ) . '</p>'
         )); 
 
     ?>

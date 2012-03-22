@@ -109,3 +109,28 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Eine Antwort auf  &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s Antworten auf  &ldquo;%2$s&rdquo;"
 
+#. Text in function
+#: comments.php:97
+msgid "Email"
+msgstr "E-Mail"
+
+#. Text in function
+#: comments.php:97
+msgid "Name"
+msgstr "Name"
+
+#. Text in function
+#: comments.php:97
+msgid "Required fields are marked %s"
+msgstr "%s Pflichtfelder"
+
+#. Text in function
+#: comments.php:97
+msgid "Website"
+msgstr "URL"
+
+#. Text in function
+#: comments.php:97
+msgid "Your email address will not be published."
+msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
+
