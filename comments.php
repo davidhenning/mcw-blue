@@ -33,10 +33,7 @@
                             <header>
                                 <div class="vcard">
                                     <?php
-                                        $avatar_size = 68;
-                                        if($comment->comment_parent != '0') {
-                                            $avatar_size = 39;
-                                        }   
+                                        $avatar_size = 40; 
                                             
                                         echo get_avatar($comment, $avatar_size);
 
@@ -101,18 +98,19 @@
         $aria_req = ( $req ? " aria-required='true'" : '' );
         $required_text = sprintf( ' ' . __('Required fields are marked %s', 'mcw-blue'), '<span class="required">*</span>' );
         $fields = array(
-            'author' => '<p class="comment-form-author">' . '<label for="author">' . __('Name', 'mcw-blue') . ($req ? '<span class="required">*</span>' : '') . '</label> ' . 
-                        '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . '></p>',
-            'email'  => '<p class="comment-form-email"><label for="email">' . __('Email', 'mcw-blue') . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . 
-                        '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . '></p>',
-            'url'    => '<p class="comment-form-url"><label for="url">' . __('Website', 'mcw-blue') . '</label>' .
-                        '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '"></p>'
+            'author' => '<p class="comment-form-author">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . '>' .
+                        '<label for="author">' . __('Name', 'mcw-blue') . ($req ? '<span class="required">*</span>' : '') . '</label></p>',
+            'email'  => '<p class="comment-form-email"><input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '"' . $aria_req . '>' .
+                        '<label for="email">' . __('Email', 'mcw-blue') . ( $req ? '<span class="required">*</span>' : '' ) . '</label></p>',
+            'url'    => '<p class="comment-form-url"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '">' . 
+                        '<label for="url">' . __('Website', 'mcw-blue') . '</label></p>'
         );
       
         comment_form(array(
             'fields' => apply_filters('comment_form_default_fields', $fields),
+            'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
             'comment_notes_before' => '',      
-            'comment_notes_after' => '<p class="comment-notes">' . __('Your email address will not be published.', 'mcw-blue') . ( $req ? $required_text : '' ) . '</p>'
+            'comment_notes_after' => ''
         )); 
 
     ?>
