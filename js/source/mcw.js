@@ -1,18 +1,22 @@
-var cdnUrl = document.getElementsByTagName('body')[0].getAttribute('data-cdn-url') || '';
-var requireConfig = {
-  paths: {
-    'jquery': 'libs/jquery/jquery-1.7.1',
-    'moduleloader': 'libs/core/moduleloader'
-  }
-};
+(function() {
+    'use strict';
 
-if(cdnUrl.length > 0 && cdnUrl.indexOf('http://') > -1) {
-  requireConfig.baseUrl = cdnUrl;
-}
+    var cdnUrl = document.getElementsByTagName('body')[0].getAttribute('data-cdn-url') || '',
+        requireConfig = {
+            paths: {
+                'jquery': 'libs/jquery/jquery-1.7.1',
+                'moduleloader': 'libs/core/moduleloader'
+            }
+        };
 
-require.config(requireConfig);
+    if(cdnUrl.length > 0 && cdnUrl.indexOf('http://') > -1) {
+      requireConfig.baseUrl = cdnUrl;
+    }
 
-require(['jquery', 'moduleloader'], function(jquery, moduleloader){
-  jquery.noConflict();
-  moduleloader.load();
-});
+    require.config(requireConfig);
+
+    require(['jquery', 'moduleloader'], function(jquery, moduleloader){
+      jquery.noConflict();
+      moduleloader.load();
+    });
+})();
