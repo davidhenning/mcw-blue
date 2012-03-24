@@ -18,7 +18,7 @@
 						<?php endif; ?>
 					</aside>
 				</header>
-				<div class="content" data-module="modules/mcw/post">
+				<div class="content" data-module="modules/mcw/post" data-module-parameters="<?php echo bloginfo('template_url'); ?>/images/">
 					<?php the_content(); ?>
 				</div>
 			</article>
