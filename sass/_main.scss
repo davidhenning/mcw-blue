@@ -37,6 +37,7 @@
 		.content {
 			font-size: 14px;
 			line-height: 1.7em;
+			@include pie-clearfix;
 			
 			p {
 				margin-bottom: 1em;
@@ -116,6 +117,7 @@
 			
 			li {
 				padding-left: 6px;
+				margin: 0;
 				
 				a {
 					color: #000000;
