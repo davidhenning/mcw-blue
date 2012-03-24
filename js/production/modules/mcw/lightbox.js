@@ -1,1 +1,0 @@
-define(["jquery"],function(a){var b={};return b.init=function(b,c){require(["libs/jquery/jquery-lightbox-0.5"],function(){var b={imageLoading:c+"lightbox-ico-loading.gif",imageBtnPrev:c+"lightbox-btn-prev.gif",imageBtnNext:c+"lightbox-btn-next.gif",imageBtnClose:c+"lightbox-btn-close.gif",imageBlank:c+"lightbox-blank.gif"};a('a[rel*="lightbox"]').lightBox(b)})},b});
