@@ -1223,7 +1223,9 @@
      * @return String
      */
     function makeOrderedList( html )
-    {
+    {       
+        html = $.trim(html);
+        html += "\n";
         var open  = [];
         var expr = /(.*)\n/g;
         var func = function ( all, line ) 
