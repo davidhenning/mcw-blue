@@ -2096,7 +2096,7 @@ jQuery.chili.recipes.csharp =
     }
 };
 
-$.chili.recipes.javascript =
+jQuery.chili.recipes.javascript =
 {
       _name: 'js'
     , _case: true
