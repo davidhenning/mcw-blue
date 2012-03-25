@@ -16,6 +16,24 @@ if(function_exists('register_sidebar')) {
 }
 
 add_filter('nav_menu_css_class' , 'highlightHome' , 10 , 2);
+add_action('widgets_init', 'themeCleanUp');
+add_filter('the_generator','removeGenerator');
+remove_filter('the_title', 'capital_P_dangit');
+remove_filter('the_content', 'capital_P_dangit');
+remove_filter('comment_text', 'capital_P_dangit');
+remove_filter('the_title', 'capital_P_dangit', 11);
+remove_filter('the_content', 'capital_P_dangit', 11);
+remove_filter('comment_text', 'capital_P_dangit', 11);
+
+function themeCleanUp() {
+	global $wp_widget_factory;
+	remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+}
+
+function removeGenerator(){
+	return false;
+}
+
 
 function highlightHome($classes, $item) {
 	if(is_home() && $item->title == 'weblog') { 
