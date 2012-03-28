@@ -60,7 +60,7 @@
 			</nav>
 			<header>
 				<p class="title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">madcats[welt]</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
 				</p>
 			</header>
 			<div id="main">
