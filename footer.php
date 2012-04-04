@@ -4,7 +4,7 @@
 			<?php 
 			$options = get_option('mcw_theme_options');
 			$jsUrl = get_bloginfo('template_url');
-			$jsUrl .= ($options['dev_mode'] == '1') ? '/js/build/' : '/js/production/';
+			$jsUrl .= ($options['dev_mode'] == '1') ? '/js/source/' : '/js/production/';
 			if($sTweet = getLastQuoteFromTwitter($options['twitter_id'])): ?>
 				<div id="tweet">
 					<div class="centerWrapper">
