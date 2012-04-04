@@ -4,7 +4,7 @@
 			<?php 
 			$options = get_option('mcw_theme_options');
 			$jsUrl = get_bloginfo('template_url');
-			$jsUrl .= ($options['dev_mode'] == '1') ? '/js/source/' : '/js/production/';
+			$jsUrl .= ($options['dev_mode'] == '1') ? '/js/build/' : '/js/production/';
 			if($sTweet = getLastQuoteFromTwitter($options['twitter_id'])): ?>
 				<div id="tweet">
 					<div class="centerWrapper">
@@ -19,6 +19,23 @@
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
+		<?php 
+		if($options['gaid'] || $options['piwikurl']) {
+			$trackData = '<div';
+
+			if($options['gaid']) {
+				$trackData .= " data-gaid='{$options['gaid']}'";
+			}
+
+			if($options['piwikurl']) {
+				$trackData .= " data-piwikurl='{$options['piwikurl']}'";
+			}
+
+			$trackData .= '></div>';
+
+			echo $trackData;
+		}
+		?>
 		<script src="<?php echo $jsUrl; ?>libs/require/require.js" data-main="<?php echo $jsUrl; ?>mcw"></script>
 		<?php echo $options['custom_footer']; ?>
 	</body>
