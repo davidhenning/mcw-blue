@@ -127,6 +127,14 @@ function mcwThemeOptionsPage() {
 					<td><input id="mcw_theme_options[cdn_url]" class="regular-text" type="text" name="mcw_theme_options[cdn_url]" value="<?php esc_attr_e( $options['cdn_url'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
+					<th scope="row">Google Analytics ID</th>
+					<td><input id="mcw_theme_options[gaid]" class="regular-text" type="text" name="mcw_theme_options[gaid]" value="<?php esc_attr_e( $options['gaid'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Piwik URL</th>
+					<td><input id="mcw_theme_options[piwikurl]" class="regular-text" type="text" name="mcw_theme_options[piwikurl]" value="<?php esc_attr_e( $options['piwikurl'] ); ?>" /></td>
+				</tr>				
+				<tr valign="top">
 					<th scope="row">Developer mode</th>
 					<td>
 						<input type="hidden" name="mcw_theme_options[dev_mode]" value="0" />
