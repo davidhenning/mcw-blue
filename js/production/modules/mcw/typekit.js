@@ -1,1 +1,1 @@
-define(["jquery"],function(a){var b={};return b.init=function(b,c){a(document).ready(function(){typeof c=="string"&&c.indexOf("use.typekit.com")>-1&&require([c],function(){try{Typekit.load()}catch(a){}})})},b});
+"use strict",define(["jquery"],function(a){var b={};return b.init=function(b,c){a(document).ready(function(){typeof c=="string"&&c.indexOf("use.typekit.com")>-1&&require([c],function(){try{Typekit.load()}catch(a){}})})},b});
