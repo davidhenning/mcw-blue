@@ -49,9 +49,9 @@ Example:
 		return exports;
 	});
 
-Use the function define() to write your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this example we are using a dependency to jQuery (jquery is a keyword containing the full path to jQuery specified in the require.js config in the file js/mcw.js). As second parameter you have to create a callback function. The callbacks parameters are the libraries you specified as dependencies before. This example uses a $ for jQuery.
+Use the function define() to write your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this case the dependency is on jQuery. As secound parameter you have to create a callback function which is called, when all dependencies are solved. Each depedency will be injected as parameter into the callback function. The example uses a $ for jQuery, so jQuery can be called as usual.
 
-Within the callback you can write your own code. There is only one simple convention you have to follow: the callback must return an object with a method called init which has to start your own code as in the example above.
+Within the callback you can write your own code. There is only one simple convention you have to follow: the callback must return an object with a method named init that starts your own code.
 
 If you are calling your module from a div element, a reference of the calling div element is passed as the first parameter to your init method. If your div has module paramaters, they are passed as well as second, third etc. parameter.
 
@@ -61,9 +61,9 @@ __Important:__ the init method is a convention of my module loading system and h
 
 
 ##Why?
-I was searching for a new slim HTML 5 theme for my blog. My old theme was a really big one. It is highly customizable via the admin panel but very slow and the generated markup is a mess with way to much nested elements. The search wasn't very successful, so I decided to create my own theme.
+I was looking for a new slim HTML 5 theme for my blog. My old theme was really big and oversized. It is highly customizable but slow and the generated markup is a mess with way to much nested elements. The search wasn't very successful, so I decided to create my own theme.
 
 ##Who
-I am web developer at Chip Xonio Online Ltd in Munich working in the portal development team for chip.de, the leading IT website in germany.
+I am a web developer at Chip Xonio Online in Munich, one of the largest websites in Germany.
 
 [require.js documentation]: http://requirejs.org/docs/api.html#defdep
