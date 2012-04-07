@@ -20,34 +20,40 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 ##Load a JavaScript module using a div element
 
 Syntax:
-	
-	<div data-module="{$pathToYourModule}" data-module-parameters="{$yourModuleParametersCommaSeparated"></div>
+
+```html
+<div data-module="{$pathToYourModule}" data-module-parameters="{$yourModuleParametersCommaSeparated"></div>
+```
 
 The module path is relativ to the directory "js" in theme directory. List the parameters as comma-separated string.
 
 Example:
-    
-    <div data-module="modules/tracking/googleanalytics" data-module-parameters="UA-XXXXXXX-X"></div>
+
+```html    
+<div data-module="modules/tracking/googleanalytics" data-module-parameters="UA-XXXXXXX-X"></div>
+```
 
 ##Write your own JavaScript module
 
 Example:
 
-	define(['jquery'], function($) {
-		var exports = {};
+```javascript
+define(['jquery'], function($) {
+	var exports = {};
 
-		function doMyStuff(element) {
-			$(element).append('<p>Have fun!</p>')
-		}
+	function doMyStuff(element) {
+		$(element).append('<p>Have fun!</p>')
+	}
 
-		exports.init = function(element [, param1 [, param2 ...]]) {
-			$(document).ready(function() {
-				doMyStuff(element);
-			});
-		}
+	exports.init = function(element [, param1 [, param2 ...]]) {
+		$(document).ready(function() {
+			doMyStuff(element);
+		});
+	}
 
-		return exports;
-	});
+	return exports;
+});
+```
 
 Use the function define() to write your module. The first parameter is an array containing the libraries (called dependencies in require.js) you want to use. In this case the dependency is on jQuery. As secound parameter you have to create a callback function which is called, when all dependencies are solved. Each depedency will be injected as parameter into the callback function. The example uses a $ for jQuery, so jQuery can be called as usual.
 
