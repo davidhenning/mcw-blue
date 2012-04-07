@@ -7,7 +7,7 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 - HTML 5
 - CSS-3 with the Compass CSS Framework
 - use of require.js for asynchronous loading of JavaScript
-- module system based on require.js (included modules: jQuery 1.7.1, jQuery Lightbox 0.5, own version of Chili 2.2 (syntax highlighting), TypeKit, Piwik, Google Analytics)
+- module system based on require.js (included modules: jQuery 1.7.1, jQuery Lightbox 0.5, own version of Chili 2.2 (syntax highlighting), TypeKit, Piwik, Google Analytics, Gaug.es)
 - modules load automaticly (jQuery, Lightbox, Chili) or can be loaded with a simple div element using HTML 5 data attributes
 - CDN support for the module system (just upload them and specify the cdn url in your theme configuration)
 - twitter integration (shows your last tweet just before the footer)
