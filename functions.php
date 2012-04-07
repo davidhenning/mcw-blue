@@ -131,6 +131,10 @@ function mcwThemeOptionsPage() {
 					<td><input id="mcw_theme_options[gaid]" class="regular-text" type="text" name="mcw_theme_options[gaid]" value="<?php esc_attr_e( $options['gaid'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
+					<th scope="row">Gaug.es ID</th>
+					<td><input id="mcw_theme_options[gaugesid]" class="regular-text" type="text" name="mcw_theme_options[gaugesid]" value="<?php esc_attr_e( $options['gaugesid'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
 					<th scope="row">Piwik URL</th>
 					<td><input id="mcw_theme_options[piwikurl]" class="regular-text" type="text" name="mcw_theme_options[piwikurl]" value="<?php esc_attr_e( $options['piwikurl'] ); ?>" /></td>
 				</tr>				

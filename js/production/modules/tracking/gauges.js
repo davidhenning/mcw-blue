@@ -1,0 +1,1 @@
+"use strict",define(function(){var a={};return a.init=function(a,b){var c=window._gauges=c||[],d=document.createElement("script"),e=document.getElementsByTagName("script")[0];d.type="text/javascript",d.async=!0,d.id="gauges-tracker",d.setAttribute("data-site-id",b),d.src="//secure.gaug.es/track.js",e.parentNode.insertBefore(d,e)},a});

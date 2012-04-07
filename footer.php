@@ -31,6 +31,10 @@
 				$trackData .= " data-piwikurl='{$options['piwikurl']}'";
 			}
 
+			if($options['gaugesid']) {
+				$trackData .= " data-gaugesid='{$options['gaugesid']}'";
+			}
+
 			$trackData .= '></div>';
 
 			echo $trackData;

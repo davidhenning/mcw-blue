@@ -7,7 +7,8 @@
                 'jquery': 'libs/jquery/jquery-1.7.1',
                 'moduleloader': 'libs/core/moduleloader',
                 'ga': 'modules/tracking/googleanalytics',
-                'piwik': 'modules/tracking/piwik'
+                'piwik': 'modules/tracking/piwik',
+                'gauges': 'modules/tracking/gauges'
             }
         };
 
@@ -24,6 +25,7 @@
         (function($) {
             var gaid = $('[data-gaid]').data('gaid');
             var piwikurl = $('[data-piwikurl]').data('piwikurl');
+            var gaugesid = $('[data-gaugesid]').data('gaugesid');
 
             if(typeof(gaid) !== 'undefined' && gaid.length > 0) {
                 require(['ga'], function(tracking) {
@@ -34,6 +36,12 @@
             if(typeof(piwikurl) !== 'undefined' && piwikurl.length > 0) {
                 require(['piwik'], function(tracking) {
                     tracking.init(null, piwikurl);
+                });
+            }
+
+            if(typeof(gaugesid) !== 'undefined' && gaugesid.length > 0) {
+                require(['gauges'], function(tracking) {
+                    tracking.init(null, gaugesid);
                 });
             }
         })(jQuery);
