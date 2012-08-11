@@ -1,0 +1,9 @@
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	#content article .content p a.external {
+		background-image: inline-image("icons/shape-move-forwards-icon32.png");
+		background-size: 16px auto;
+	}
+}
