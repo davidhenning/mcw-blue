@@ -1,0 +1,26 @@
+@media screen and (min-width: 480px) and (max-width: 800px) {
+
+	.centerWrapper {
+		width: 100%;
+		
+		> nav {
+
+			position: static;
+
+			li {
+				float: none;
+			}
+
+			form {
+				position: static;
+				display: none;
+			}
+
+		}
+
+	}
+
+	#content {
+		width: 100%;
+	}
+}

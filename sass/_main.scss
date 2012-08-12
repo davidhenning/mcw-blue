@@ -1,5 +1,5 @@
 #main {
-    @include pie-clearfix;
+    overflow: hidden;
 }
 
 #content {
@@ -37,7 +37,7 @@
         .content {
             font-size: 16px;
             line-height: 1.8em;
-            @include pie-clearfix;
+            overflow: hidden;
             
             p {
                 margin-bottom: 1em;

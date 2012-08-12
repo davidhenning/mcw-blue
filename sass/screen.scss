@@ -54,7 +54,7 @@ a {
 		font-size: 12px;
 		color: #777777;
 		position: relative;
-		@include pie-clearfix;
+		overflow: hidden;
 		
 		li {
 			float: left;
@@ -119,4 +119,5 @@ a {
 
 @import "main";
 @import "footer";
+@import "mobile";
 @import "retina";
