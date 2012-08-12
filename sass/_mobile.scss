@@ -1,7 +1,11 @@
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px), (max-width: 800px) {
 
 	.centerWrapper {
-		width: 100%;
+		width: auto;
+
+		> header {
+			font-size: 30px;
+		}
 
 		> nav {
 
@@ -21,6 +25,30 @@
 	}
 
 	#content {
-		width: 100%;
+		width: auto;
+
+		article {
+			header {
+				h2 {
+					font-size: 22px;
+				}
+
+				aside {
+					font-size: 10px;
+				}
+			}
+
+			.content {
+				font-size: 14px;
+			}
+		}
+	}
+
+	body > footer {
+		#info {
+			.centerWrapper {
+				padding: 5px 10px 20px 10px;
+			}
+		}
 	}
 }
