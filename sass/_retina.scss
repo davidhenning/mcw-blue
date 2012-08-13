@@ -6,4 +6,9 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-image: inline-image("icons/shape-move-forwards-icon32.png");
 		background-size: 16px auto;
 	}
+
+	body > footer #tweet .centerWrapper {
+		background-image: inline-image("icons/footer_twitter_64.png");
+		background-size: 32px auto;
+	}
 }

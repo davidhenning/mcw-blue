@@ -3,10 +3,10 @@ body > footer {
 		background: #F7F7F7;
 		
 		.centerWrapper {
-			$tweetHorizontalPadding: 25px;
+			$tweetHorizontalPadding: 32px;
 			width: $mainWidth - $tweetHorizontalPadding * 2;
 			padding: 12px $tweetHorizontalPadding;
-			background: inline-image("icons/footer_twitter.png") no-repeat 0 13px transparent;
+			background: inline-image("icons/footer_twitter_32.png") no-repeat 0 4px transparent;
 		}
 		
 		q {
