@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width; initial-scale=1; user-scaleable=0;">
 		<?php $options = get_option('mcw_theme_options'); echo $options['typekit']; ?>
 		<title>
 			<?php

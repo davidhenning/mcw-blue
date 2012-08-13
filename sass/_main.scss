@@ -230,7 +230,7 @@
     }
 
     #pagination {
-        @include pie-clearfix;
+        overflow: hidden;
         font-size: 14px; 
         
         div {

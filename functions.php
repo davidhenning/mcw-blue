@@ -15,15 +15,20 @@ if(function_exists('register_sidebar')) {
 	));
 }
 
-add_filter('nav_menu_css_class' , 'highlightHome' , 10 , 2);
+add_filter('nav_menu_css_class', 'highlightHome', 10, 2);
 add_action('widgets_init', 'themeCleanUp');
 add_filter('the_generator','removeGenerator');
+add_filter('the_content', 'removeImageDimensions', 10);
 remove_filter('the_title', 'capital_P_dangit');
 remove_filter('the_content', 'capital_P_dangit');
 remove_filter('comment_text', 'capital_P_dangit');
 remove_filter('the_title', 'capital_P_dangit', 11);
 remove_filter('the_content', 'capital_P_dangit', 11);
 remove_filter('comment_text', 'capital_P_dangit', 11);
+
+function removeImageDimensions($html) {
+	return preg_replace('/(width|height)=\"\d*\"\s/', '', $html);
+}
 
 function themeCleanUp() {
 	global $wp_widget_factory;
