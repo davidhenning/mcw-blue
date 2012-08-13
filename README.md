@@ -6,6 +6,8 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 ##Features
 - HTML 5
 - CSS-3 with the Compass CSS Framework
+- Responsive layout for iOS and Android browsers (in development)
+- Retina display support (icons and stylesheet)
 - use of require.js for asynchronous loading of JavaScript
 - module system based on require.js (included modules: jQuery 1.7.1, jQuery Lightbox 0.5, own version of Chili 2.2 (syntax highlighting), TypeKit, Piwik, Google Analytics, Gaug.es)
 - modules load automaticly (jQuery, Lightbox, Chili) or can be loaded with a simple div element using HTML 5 data attributes
@@ -16,6 +18,9 @@ mcw[blue] is a Wordpress theme for my personal blog. It is written in HTML 5 and
 - sidebar with widget support
 - custom archive template grouped by year and month
 - i18n support (included languages english and german)
+
+##Planned
+- Complete rewrite of all stylesheets to implement a mobile first layout
 
 ##Load a JavaScript module using a div element
 
