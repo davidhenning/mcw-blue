@@ -3,15 +3,6 @@
 define(['jquery'], function($) {
     var exports = {};
 
-    exports.highlightExternalUrls = function(element) {
-        $(document).ready(function() {
-            $('a:not([href*="madcatswelt"])[href^="http"]:not([class*="noArrow"])', element)
-                .addClass('external')
-                .attr('title', 'Externer Link')
-                .attr('target', '_blank');
-        }); 
-    }
-
     exports.highlightSyntax = function(element) {
         require(['libs/jquery/jquery-chili-2.2'], function() {
             $(document).ready(function() {
@@ -35,9 +26,7 @@ define(['jquery'], function($) {
         });
     }
 
-    exports.init = function(element, lightboxImageDir) {
-        this.highlightExternalUrls(element);
-        
+    exports.init = function(element, lightboxImageDir) {        
         if($(element).has('a[rel*="lightbox"]').length > 0) {
             this.initLightbox(element, lightboxImageDir);
         }
