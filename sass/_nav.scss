@@ -1,0 +1,26 @@
+nav {
+	background: #252525;
+	font-size: 12px;
+	color: $headlineColor;
+	overflow: hidden;
+	
+	a {
+		padding: 11px;
+		display: block;
+		line-height: 15px;
+		letter-spacing: 1px;
+		
+		&:hover {
+			background: $headlineColor;
+			color: #FFFFFF;
+		}
+	}
+
+	.current-menu-item a, a:active {
+		text-decoration: underline;
+	}
+
+	form {
+		display: none;
+	}
+}

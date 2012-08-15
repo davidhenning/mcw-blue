@@ -1,4 +1,4 @@
-			</div>
+			</section>
 		</div>
 		<footer>
 			<?php 
@@ -8,13 +8,17 @@
 			if($sTweet = getLastQuoteFromTwitter($options['twitter_id'])): ?>
 				<div id="tweet">
 					<div class="centerWrapper">
-						<q cite="http://twitter.com/#!/<?php echo $options['twitter_id']; ?>"><?php echo $sTweet; ?></q>
+						<p>
+							<q cite="http://twitter.com/#!/<?php echo $options['twitter_id']; ?>"><?php echo $sTweet; ?></q>
+						</p>
 					</div>
 				</div>
 			<?php endif; ?>
 			<div id="info">
 				<div class="centerWrapper">
-					<a href="http://www.wordpress.org/" target="_blank">WordPress</a> | Theme: <a href="https://github.com/MadCatme/mcw-blue" target="_blank">mcw[blue]</a>
+					<p>
+						<a href="http://www.wordpress.org/" target="_blank">WordPress</a> | Theme: <a href="https://github.com/MadCatme/mcw-blue" target="_blank">mcw[blue]</a>
+					</p>
 				</div>
 			</div>
 		</footer>

@@ -1,0 +1,57 @@
+#sidebar {
+    padding: 0 10px;
+
+    h3 {
+        @include droid;
+        color: #4F525A;
+        font-size: 13px;
+        line-height: 15px;
+        padding: 6px 8px 3px 0;
+        margin-bottom: 7px;
+    }
+    
+    a {
+        color: $highlightColor;
+        
+        &:hover {
+            color: $headlineColor;
+        }
+    }
+    
+    ul {
+        margin: 0 0 10px;
+        font-size: 14px;
+        line-height: 22px;
+        
+        > li {
+            margin-bottom: 14px;
+        }
+        
+        ul {
+            > li {
+                padding: 2px 2px 2px 0;
+                margin: 0;
+                
+                a {
+                    margin: 0;
+                    display: inline;
+                }
+            }
+        }
+    }
+    
+        
+    .widget_tag_cloud {
+        line-height: 1.6em;
+        text-align: center;
+        
+        h3 {
+            text-align: left;
+        }
+        
+        a {
+            display: inline-block;
+            margin: 0 6px;
+        }
+    }
+}

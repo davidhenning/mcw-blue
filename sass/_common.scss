@@ -1,0 +1,70 @@
+$headlineColor: #FF4E00;
+$highlightColor: #657B83;
+
+$contentPaddingHorizontal: 10px;
+
+@mixin droid {
+	font-family: "droid-sans-1", "droid-sans-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+}
+
+@mixin adelle {
+	font-family: "adelle-1", "adelle-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+}
+
+html, body {
+	@include droid;
+	width: auto;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include adelle;
+	font-weight: 600;
+	color: $headlineColor;
+}
+
+header .title {
+	@include adelle;
+	color: #FFFFFF;
+	font-weight: 500;
+}
+
+.centerWrapper {
+	width: auto;
+}
+
+#content {
+	padding: $contentPaddingHorizontal;
+}
+
+#pagination {
+    overflow: hidden;
+    font-size: 14px; 
+    
+    div {
+        float: left;
+		width: 50%;
+		padding: 2px 0;
+    }
+    
+    a {
+        color: #657B83;
+        
+        &:hover {
+            color: $headlineColor;
+        }
+    }
+    
+    .next {
+        text-align: right;
+    }
+}

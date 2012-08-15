@@ -7,7 +7,8 @@
 				<p><?php _e('Search Results for:', 'mcw-blue'); ?> &quot;<?php echo get_search_query(); ?>&quot;</p>
 			</header>
 		<?php endif; ?>
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while(have_posts()): ?>
+			<?php the_post(); ?>
 			<article id="post-<?php the_ID(); ?>">
 				<?php if(!is_page()): ?>
 					<header>

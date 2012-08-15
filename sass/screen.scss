@@ -1,123 +1,14 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
-@import "compass/utilities/general/clearfix";
 
-$mainWidth: 960px;
-$contentPaddingHorizontal: 10px;
-$headlineColor: #0F457C;
-
-@mixin droid {
-	font-family: "droid-sans-1", "droid-sans-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-}
-
-@mixin adelle {
-	font-family: "adelle-1", "adelle-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
-}
-
-html {
-	@include droid;
-	font-size: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, .centerWrapper > header .title {
-	@include adelle;
-	font-weight: 700;
-	color: $headlineColor;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.centerWrapper {
-	width: $mainWidth;
-	margin: 0 auto;
-
-	> header {
-		font-size: 51px;
-		color: $headlineColor;
-		padding: 10px;
-		
-		a {
-			display: block;
-			margin: 15px 0 7px 0; 
-		}
-	}
-	
-	> nav {
-		border-bottom: 1px solid #E9E9E9;
-		font-size: 12px;
-		color: #777777;
-		position: relative;
-		overflow: hidden;
-		
-		li {
-			float: left;
-		}
-		
-		a {
-			padding: 11px;
-			display: block;
-			line-height: 15px;
-			letter-spacing: 1px;
-			
-			&:active {
-				background: #F7F7F7;
-			}
-			
-			&:hover {
-				background: #F1F1F1;
-				color: #000000;
-			}
-		}
-		
-		.current-menu-item a {
-			background: #F7F7F7;
-		}
-		
-		form {
-			position: absolute;
-			top: 3px;
-			right: 10px;
-			width: 210px;
-			height: 23px;
-		}
-		
-		fieldset {
-			position: relative;
-		}
-		
-		input[type="text"] {
-			height: 13px;
-			padding: 7px 30px 5px 7px;
-			width: 170px;
-			border: 1px solid #E9E9E9;
-			border-left-color: #DDD;
-			border-top-color: #DDD;
-			background: #F7F7F7;
-			color: #AFAFAF;
-		}
-		
-		input[type="submit"] {
-			position: absolute;
-			top: 4px;
-			right: 8px;
-			width: 17px;
-			height: 17px;
-			background: inline-image("icons/nav_search.png") no-repeat left top;
-			color: transparent;
-			border: none;
-			padding: 0;
-		}
-	}
-}
-
-@import "main";
+@import "common";
+@import "header";
+@import "nav";
+@import "article";
+@import "respond";
+@import "sidebar";
 @import "footer";
-@import "mobile";
+
+@import "tablet";
+@import "desktop";
+
 @import "retina";

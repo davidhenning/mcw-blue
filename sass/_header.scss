@@ -1,0 +1,9 @@
+body > header {
+	font-size: 30px;
+	color: $headlineColor;
+	background: #252525;
+
+	.title {
+		padding: $contentPaddingHorizontal;
+	}
+}

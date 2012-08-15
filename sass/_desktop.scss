@@ -1,0 +1,28 @@
+$desktopWidth: 960px;
+
+@media only screen and (min-width: 1025px) {
+	html {
+		background: #F1F1F1;
+	}
+
+	.centerWrapper {
+		width: $desktopWidth;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	#main {
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+
+	#content {
+	    float: left;
+	    width: 640px - $contentPaddingHorizontal * 2;
+	}
+
+	#sidebar {
+		padding: $contentPaddingHorizontal;
+	    float: left;
+	}
+}

@@ -49,8 +49,8 @@
 		?>
 	</head>
 	<body data-cdn-url="<?php echo $cdnUrl; ?>">
-		<div class="centerWrapper">
-			<nav>
+		<nav>
+			<div class="centerWrapper">
 				<?php wp_nav_menu(array('container' => false)); ?>
 				<form action="<?php bloginfo('home'); ?>" method="get">
 					<fieldset id="search">
@@ -58,10 +58,14 @@
 						<input type="submit" name="search">
 					</fieldset>
 				</form>
-			</nav>
-			<header>
+			</div>
+		</nav>
+		<header>
+			<div class="centerWrapper">
 				<p class="title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
 				</p>
-			</header>
-			<div id="main">
+			</div>
+		</header>
+		<div class="centerWrapper">
+			<section id="main">
