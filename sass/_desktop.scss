@@ -26,4 +26,8 @@ $desktopWidth: 960px;
 		padding: 10px 0 10px 10px;
 	    float: left;
 	}
+
+	#tweet .centerWrapper {
+		width: $desktopWidth - $tweetHorizontalPadding * 2;
+	}
 }

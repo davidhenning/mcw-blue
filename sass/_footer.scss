@@ -1,3 +1,5 @@
+$tweetHorizontalPadding: 32px;
+
 footer {
 	background: #252525;
 	color: #657B83;
@@ -10,7 +12,6 @@ footer {
 		background: #F7F7F7;
 		
 		.centerWrapper {
-			$tweetHorizontalPadding: 32px;
 			padding: 12px $tweetHorizontalPadding;
 			background: inline-image("icons/footer_twitter_32.png") no-repeat 5px 4px transparent;
 		}
