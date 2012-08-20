@@ -6,8 +6,9 @@
     }
 
     h2, h3 {
-        font-size: 1.5em;
+        font-size: 18px;
         margin-bottom: 1em;
+        color: #657B83;
     }
 
     ol {
@@ -25,36 +26,31 @@
 
     article {
         margin: 1em 0;
+        overflow: hidden;
 
-        header {
-            position: relative;
-            height: 20px;
+        div.avatar {
+            float: right;
+            width: 55px;
+            margin: 0 0 0 10px;           
+ 
+            img {
+                padding: 5px;
+                background: #FFFFFF;
+                border-radius: 2px;
+                border: 1px solid #AAAAAA;
+            }
+        }
+
+        .vcard {
             font-size: 11px;
+
+            a {
+                border: none;
+            }
+        }
+
+        .content p:last-child {
             margin: 0;
-            padding-left: 70px;
-
-            .vcard  {
-                padding-top: 2px;
-            }
-        }
-
-        img.avatar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 5px;
-            background: #FFFFFF;
-            border-radius: 2px;
-            border: 1px solid #AAAAAA;
-        }
-
-        .content {
-            width: 530px;
-            margin-left: 70px;
-
-            p:last-child {
-                margin: 0;
-            }
         }
     }
 }
@@ -64,6 +60,11 @@
         p {
             overflow: hidden;
             padding: 4px 0;
+
+            label {
+                display: block;
+                margin-top: 3px;
+            }
 
             input[type="text"] {
                 width: 260px;

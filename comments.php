@@ -30,12 +30,14 @@
 
                     <li>
                         <article id="comment-<?php comment_ID(); ?>">
-                            <header>
-                                <div class="vcard">
+                            <div class="avatar">
+                                <?php   
+                                    echo get_avatar($comment, 40);
+                                ?>
+                            </div>
+                            <div class="content">
+                                <p class="vcard">
                                     <?php
-                                        $avatar_size = 40; 
-                                            
-                                        echo get_avatar($comment, $avatar_size);
 
                                         printf(__('%1$s on %2$s <span class="says">said:</span>', 'mcw-blue'),
                                             sprintf('<span class="fn">%s</span>', get_comment_author_link()),
@@ -47,16 +49,13 @@
                                         );
                                     ?>
 
-                                    <?php edit_comment_link(__('Edit', 'mcw-blue' ), '<span class="edit">', '</span>'); ?>
-                                </div>
+                                    <?php edit_comment_link(__('Edit', 'mcw-blue' ), '<span class="edit"> &middot; ', '</span>'); ?>
 
-                                <?php if($comment->comment_approved == '0'): ?>
-                                    <em class="awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mcw-blue'); ?></em>
-                                <?php endif; ?>
+                                    <?php if($comment->comment_approved == '0'): ?>
+                                        <em class="awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'mcw-blue'); ?></em>
+                                    <?php endif; ?>
 
-                            </header>
-
-                            <div class="content">
+                                </p>
                                 <?php comment_text(); ?>
                             </div>
 
