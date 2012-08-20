@@ -14,11 +14,15 @@ article {
         }
         
         .meta {
-            color: #4F525A;
+            color: #24AF3A;
             letter-spacing: .1em;
             font-size: 14px;
             line-height: 1.6em;
             margin: 0 0 8px 0;
+
+            a:hover {
+            	text-decoration: underline;
+            }
         }
 	}
 
