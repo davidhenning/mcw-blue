@@ -1,6 +1,34 @@
+$maxPageWidth: 960px;
+
 @media only screen and (min-width: 800px) {
 	nav li {
 		float: left;
+	}
+
+	.centerWrapper {
+		max-width: $maxPageWidth;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	#main {
+		background: #FFFFFF;
+		overflow: hidden;
+	}
+
+	#content {
+	    float: left;
+	    width: 640px - $contentPaddingHorizontal * 2;
+	}
+
+	#sidebar {
+		max-width: 310px;
+		padding: 10px 0 10px 10px;
+	    float: left;
+	}
+
+	#tweet .centerWrapper {
+		max-width: $maxPageWidth - $contentPaddingHorizontal * 2;
 	}
 
 	#respond form p label {

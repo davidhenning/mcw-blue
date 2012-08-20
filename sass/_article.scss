@@ -9,21 +9,21 @@ article {
 		margin-bottom: 1.5em;
 
         h2 {
-            font-size: 20px;
+            font-size: 26px;
             line-height: 1em;
         }
         
-        aside {
+        .meta {
             color: #4F525A;
             letter-spacing: .1em;
-            font-size: 10px;
+            font-size: 14px;
             line-height: 1.6em;
-            margin: .2em 0;
+            margin: 0 0 8px 0;
         }
 	}
 
 	.content {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.8em;
 
         p {
@@ -45,7 +45,7 @@ article {
         }
         
         h3 {
-            font-size: 16px;
+            font-size: inherit;
             margin-bottom: .5em;
             color: #657B83;
         }

@@ -12,13 +12,13 @@
 			<article id="post-<?php the_ID(); ?>">
 				<?php if(!is_page()): ?>
 					<header>
-						<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						<aside class="meta">
+						<p class="meta">
 							<time pubdate datetime="<?php the_time('Y-m-d\TH:i:s'); ?>"><?php the_time(get_option('date_format')); ?></time> 
 							<?php if(!is_single()): ?>
 								&middot; <?php comments_popup_link(__('write a comment', 'mcw-blue'), __('one comment', 'mcw-blue'), __('% comments', 'mcw-blue')); ?>
 							<?php endif; ?>
-						</aside>
+						</p>
+						<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					</header>
 				<?php endif; ?>
 				<div class="content" data-module="modules/mcw/post" data-module-parameters="<?php echo bloginfo('template_url'); ?>/images/">
