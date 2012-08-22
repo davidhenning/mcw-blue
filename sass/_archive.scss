@@ -12,11 +12,9 @@
 				padding-left: 6px;
 				margin: 0;
 
-				a {
-					color: #000000;
-					
+				a {				
 					&:hover {
-						color: #990000;
+						color: $headlineColor;;
 					}
 				}
 
@@ -25,6 +23,7 @@
 					padding: 0;
 
 					h2 {
+						color: #4F525A;
 						font-size: 22px; 
 					}
 				}
