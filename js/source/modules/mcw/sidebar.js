@@ -30,7 +30,7 @@ define(['jquery'], function($) {
 
 	return {
 		init: function(element) {
-			$.get('proxy.php', function(data) {
+			$.get('/proxy.php', function(data) {
 				fillEntries(element, data);
 			});
 		}
