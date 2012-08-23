@@ -8,7 +8,10 @@
                 'moduleloader': 'libs/core/moduleloader',
                 'ga': 'modules/tracking/googleanalytics',
                 'piwik': 'modules/tracking/piwik',
-                'gauges': 'modules/tracking/gauges'
+                'gauges': 'modules/tracking/gauges',
+                'googleplus': 'modules/social/googleplus',
+                'twitter': 'modules/social/twitter',
+                'fb': 'modules/social/facebook'
             }
         };
 
@@ -45,5 +48,13 @@
                 });
             }
         })(jQuery);
+
+        (function() {
+            require(['googleplus', 'twitter', 'fb'], function(g, t, f) {
+                g.init();
+                t.init();
+                f.init();
+            });
+        })();
     });
 })();
