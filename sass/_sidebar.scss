@@ -17,7 +17,15 @@
             color: $headlineColor;
         }
     }
-    
+ 
+    .widget_rss h3 a {
+        color: inherit;
+
+        &:first-child {
+            display: none;
+        }
+    }
+
     ul {
         margin: 0 0 10px;
         font-size: 14px;
