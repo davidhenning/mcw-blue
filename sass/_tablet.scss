@@ -31,6 +31,12 @@ $maxPageWidth: 960px;
 		max-width: $maxPageWidth - $contentPaddingHorizontal * 2;
 	}
 
+	footer #info .license {
+		display: inline;
+		float: right;
+		margin: 0;
+	}
+
 	#respond form p label {
         display: inline;
     }

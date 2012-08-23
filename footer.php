@@ -19,6 +19,9 @@
 				<div class="centerWrapper">
 					<p>
 						<a href="http://www.wordpress.org/">WordPress</a> | Theme: <a href="https://github.com/MadCatme/mcw-blue">mcw[blue]</a>
+						<span class="license">
+							<a class="icon-creative-commons" href="http://creativecommons.org/licenses/by-sa/3.0/de/">Creatve Commons 3.0 BY-SA</a>
+						</span>
 					</p>
 				</div>
 			</div>
