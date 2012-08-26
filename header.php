@@ -68,4 +68,4 @@
 			</div>
 		</header>
 		<div class="centerWrapper">
-			<section id="main">
+			<div id="main">

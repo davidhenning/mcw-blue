@@ -1,4 +1,4 @@
-<div id="sidebar" class="widget-area" role="complementary">
+<section id="sidebar" class="widget-area" role="complementary">
 	<?php if(is_single() && !is_page()): ?>
 		<ul>
 			<li>
@@ -18,4 +18,4 @@
 		</ul>
 	<?php endif; ?>
 	<?php dynamic_sidebar(); ?> 
-</div>
+</section>

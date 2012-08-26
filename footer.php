@@ -1,4 +1,4 @@
-			</section>
+			</div>
 		</div>
 		<footer>
 			<?php 
