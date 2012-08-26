@@ -1,0 +1,1 @@
+"use strict";define(function(){return{init:function(){window.___gcfg={lang:"de"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/plusone.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()}}});

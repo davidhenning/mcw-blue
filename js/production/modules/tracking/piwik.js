@@ -1,1 +1,1 @@
-"use strict",define(function(){var a={};return a.init=function(a,b){require([b+"piwik.js"],function(){try{var a=Piwik.getTracker(b+"piwik.php",1);a.trackPageView(),a.enableLinkTracking()}catch(c){}})},a});
+"use strict";define(function(){var e={};return e.init=function(e,t){require([t+"piwik.js"],function(){try{var e=Piwik.getTracker(t+"piwik.php",1);e.trackPageView(),e.enableLinkTracking()}catch(n){}})},e});

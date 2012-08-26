@@ -1,1 +1,1 @@
-define(["jquery"],function(a){var b={};return b.load=function(b){a("[data-module]",b).each(function(b){var c=a(this).data("module"),d=a(this).data("module-parameters")||"";d=d.split(","),d.unshift(this),require([c],function(a){a.init.apply(a,d)})})},b});
+define(["jquery"],function(e){var t={};return t.load=function(t){e("[data-module]",t).each(function(t){var n=e(this).data("module"),r=e(this).data("module-parameters")||"";r=r.split(","),r.unshift(this),require([n],function(e){e.init.apply(e,r)})})},t});
