@@ -1,7 +1,7 @@
 build:
 	@echo "Building mcw-blue"
 	@echo "\nCompiling Compass files ..."
-	@compass compile -q
+	@compass compile -q -c config_production.rb --force
 	@echo "Done"
 	@echo "\nUglifying JavaScript ..."
 	@rm -rf ./js/production/*
