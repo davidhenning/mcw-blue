@@ -4,8 +4,8 @@
     var cdnUrl = document.getElementsByTagName('body')[0].getAttribute('data-cdn-url') || '',
         requireConfig = {
             paths: {
-                'jquery': 'libs/jquery/jquery-1.8.0',
-                'moduleloader': 'libs/core/moduleloader',
+                'jquery': 'vendor/jquery/jquery-1.8.0',
+                'moduleloader': 'core/moduleloader',
                 'ga': 'modules/tracking/googleanalytics',
                 'piwik': 'modules/tracking/piwik',
                 'gauges': 'modules/tracking/gauges',

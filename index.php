@@ -21,7 +21,7 @@
 						<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					</header>
 				<?php endif; ?>
-				<div class="content" data-module="modules/mcw/post" data-module-parameters="<?php echo bloginfo('template_url'); ?>/images/">
+				<div class="content" data-module="modules/content/post" data-module-parameters="<?php echo bloginfo('template_url'); ?>/images/">
 					<?php the_content(); ?>
 				</div>
 			</article>

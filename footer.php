@@ -48,7 +48,7 @@
 			echo $trackData;
 		}
 		?>
-		<script src="<?php echo $jsUrl; ?>libs/require/require.js" data-main="<?php echo $jsUrl; ?>mcw"></script>
+		<script src="<?php echo $jsUrl; ?>vendor/requirejs/requirejs-2.0.6.js" data-main="<?php echo $jsUrl; ?>hook.js"></script>
 		<?php echo $options['custom_footer']; ?>
 	</body>
 </html>

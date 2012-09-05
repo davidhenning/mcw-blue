@@ -3,17 +3,8 @@
 define(['jquery'], function($) {
     var exports = {};
 
-    exports.highlightSyntax = function(element) {
-        require(['libs/jquery/jquery-chili-2.2'], function() {
-            $(document).ready(function() {
-                $.chili.automatic.active = false;
-                $('pre', element).chili();
-            });
-        });
-    }
-
     exports.initLightbox = function(element, lightboxImageDir) {
-        require(['libs/jquery/jquery-lightbox-0.5'], function() {
+        require(['vendor/jquery-plugins/jquery-lightbox-0.5'], function() {
             var config = {
                 imageLoading: lightboxImageDir + 'lightbox-ico-loading.gif',     
                 imageBtnPrev: lightboxImageDir + 'lightbox-btn-prev.gif',            
@@ -29,10 +20,6 @@ define(['jquery'], function($) {
     exports.init = function(element, lightboxImageDir) {        
         if($(element).has('a[rel*="lightbox"]').length > 0) {
             this.initLightbox(element, lightboxImageDir);
-        }
-
-        if($(element).has('pre').length > 0) {
-          this.highlightSyntax(element);
         }
     }
 
