@@ -1,14 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Bitter:400,700);
+
+
 $headlineColor: #FF4E00;
 $highlightColor: #657B83;
 
 $contentPaddingHorizontal: 10px;
 
 @mixin droid {
-	font-family: "droid-sans-1", "droid-sans-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	font-family: 'Droid Sans', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
 }
 
 @mixin adelle {
-	font-family: "adelle-1", "adelle-2", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	font-family: 'Bitter', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
 }
 
 html, body {
